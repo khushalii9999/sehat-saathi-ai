@@ -1,0 +1,247 @@
+.home {
+  min-height: calc(100vh - 60px);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(160deg, #eff6ff 0%, #f0fdf4 60%, #f8fafc 100%);
+  padding: 60px 0 50px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-inner {
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  font-size: 17px;
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.hero-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.mode-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 20px;
+  border-radius: var(--radius-lg);
+  border: 2px solid transparent;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
+  text-align: left;
+  text-decoration: none;
+}
+
+.mode-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.mode-card--patient:hover {
+  border-color: var(--color-primary);
+}
+
+.mode-card--asha:hover {
+  border-color: var(--color-secondary);
+}
+
+.mode-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mode-card--patient .mode-card-icon {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.mode-card--asha .mode-card-icon {
+  background: var(--color-secondary-light);
+  color: var(--color-secondary);
+}
+
+.mode-card-body {
+  flex: 1;
+}
+
+.mode-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 5px;
+}
+
+.mode-card-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.mode-card-arrow {
+  color: var(--color-text-light);
+  flex-shrink: 0;
+}
+
+/* Features */
+.features {
+  padding: 56px 0;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 36px;
+  letter-spacing: -0.4px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  padding: 22px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  transition: box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.feature-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.feature-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+/* Disclaimer section */
+.home-disclaimer {
+  padding: 0 0 40px;
+}
+
+/* Emergency bar */
+.emergency-bar {
+  background: #fef2f2;
+  border-top: 1px solid #fecaca;
+  padding: 14px 0;
+}
+
+.emergency-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-urgent);
+  font-size: 14px;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+
+.emergency-call-btn {
+  margin-left: auto;
+  padding: 7px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--color-urgent);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.15s;
+}
+
+.emergency-call-btn:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 0 36px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  .hero-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .emergency-call-btn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
